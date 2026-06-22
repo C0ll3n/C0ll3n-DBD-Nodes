@@ -45,7 +45,7 @@
 
 ### Extras node groups
 
-*These are groups of nodes that function as additional add-ons: “Sun Damage” adds a gradient to “DBD Face Sun Damage” within Bubba's nodes, leaving a visible mark along the edges; “Texture Color Influence” is only for editing colors, saturations, etc., of a color texture (BC); “Custom Tip/Root Color” is only useful on hair whose UVs' have been changed—such as Legacy wigs—to use IDGAD shaders or the dedicated Hair Styles shader, and "DBD JD IDGAD" is a group of nodes that only work for Bubba shaders that expect those inputs (Specular, Roughness, and Scatter)*
+*These are groups of nodes that function as additional add-ons: “Sun Damage” adds a gradient to “DBD Face Sun Damage” within Bubba's nodes, leaving a visible mark along the edges; “Texture Color Influence” is only for editing colors, saturations, etc., of a color texture (BC); “Custom Tip/Root Color” is only useful on hair whose UVs' have been changed—such as Legacy wigs—to use IDGAD shaders or the dedicated Hair Styles shader, and "DBD JD IDGAD" is a node group made by JD that only work for Bubba shaders that expect those inputs (Specular, Roughness, and Scatter)*
 
 - Sun Damage Gradient
 - Texture Color Influence
