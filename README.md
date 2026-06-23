@@ -16,7 +16,7 @@
 *These are nodes that attempt to convert certain parameters from the dedicated shaders to the Bubba or Lance Quen shaders*
 
 - C0ll3n Hair composite
-- C0llen HC Simple [IDGAD]
+- C0ll3n HC Simple [IDGAD]
 
 <img width="626" height="446" alt="v2 3 5SS10" src="https://github.com/user-attachments/assets/5d175c61-408d-44f2-bca9-e2bdd38d43c1" />
 
@@ -54,7 +54,7 @@
 
 ### Hair Guides
 
-*These are alpha textures for use it as a guide designed for wwork with custom hairs node and/or shader and remap UV's of your hair model, this process can be done in UV Editing in Blender; for being append, you have to go in 'Image' folder; HairGuide_IRS it's a texture for IRS texture made from Bubba, but it needs to be imported maually (IRS.png inside 'Image' folder) using a 'Texture Image' node and connect it in any IDGAD shader*
+*These are alpha textures for use it as a guide designed for wwork with custom hairs node and/or shader and remap UV's of your hair model, this process can be done in UV Editing in Blender; for being append, you have to go in 'Image' folder; HairGuide_IRS it's a texture for IRS texture made by Bubba, but it needs to be imported maually (IRS.png inside 'Image' folder) using a 'Texture Image' node and connect it in any IDGAD shader*
 
 - HairGuide_Curly
 - HairGuide_Dreadlocks
