@@ -1,24 +1,24 @@
 # C0ll3n-DBD-Nodes
 
 ## Content
-### Dedicated Shaders
+### Dedicated Shader
 
-*These are dedicated hair shaders that expect IDGAD (packaged) or Legacy texture inputs for the hair*
+*It's a dedicated shader with a toggle to choose between Legacy-style or IDGAD-style hair; the inputs change depending on the selection.*
 
-- C0ll3n DBD Hair [IDGAD]
-- C0ll3n DBD Hair [Legacy]
+- C0ll3n DBD Hair
 
-<img width="600" height="709" alt="v2 3 Info2" src="https://github.com/user-attachments/assets/5e0cc6a3-bda5-4494-b3ac-387f05e5867e" />
+<img width="288" height="163" alt="v2 3 5" src="https://github.com/user-attachments/assets/df5d08d5-3e6f-4f01-8650-409ec7d9566c" />
+
+<img width="303" height="788" alt="v2 3 5SS2" src="https://github.com/user-attachments/assets/cdb49a17-9fea-40be-8ad8-7c7d30c1b204" /><img width="303" height="606" alt="v2 3 5SS3" src="https://github.com/user-attachments/assets/7d2625d7-3ed4-4510-b330-795d3a9518be" />
 
 ### Hair Composite Nodes
 
-*These are nodes that attempt to convert certain parameters from the dedicated shaders to the Bubba or Lance Queen shaders*
+*These are nodes that attempt to convert certain parameters from the dedicated shaders to the Bubba or Lance Quen shaders*
 
-- C0ll3n HC IDGAD
-- C0ll3n HC Legacy
+- C0ll3n Hair composite
 - C0llen HC Simple [IDGAD]
 
-<img width="884" height="812" alt="v2 3 Info1" src="https://github.com/user-attachments/assets/bbe3c0b4-f73e-4906-bcf9-1b875749176d" />
+<img width="626" height="446" alt="v2 3 5SS10" src="https://github.com/user-attachments/assets/5d175c61-408d-44f2-bca9-e2bdd38d43c1" />
 
 ### Custom Hairs shader and node
 
@@ -32,18 +32,16 @@
 
 ### Parallax/Offset Alpha Hair Composite, Input and Output
 
-*These are groups of nodes designed to create the effect of adding more hair, which is useful for models with very little hair. The effect varies depending on the viewing angle, but it requires support from a shader; it can be either IDGAD or Legacy, and there is a version for each*
+*These are groups of nodes designed to create the effect of adding more hair, which is useful for models with very little hair. The effect varies depending on the viewing angle, but it requires support from a shader; it can be either IDGAD or Legacy*
 *You need to create 3 more copies of the original texture, depending on which one you're working on (IDGAD or Legacy), no apply for Simple version*
 
-- C0ll3n IDGAD AHC [I(P/O)]
-- C0ll3n IDGAD AHC [O(P/O)]
-- C0ll3n Legacy AHC [I(P/O)]
-- C0ll3n Legacy AHC [O(P/O)]
+- C0ll3n Parallax/Offset [Inputs]
+- C0ll3n Parallax/Offset [Outputs]
 - C0ll3n Simple Parallax
 
-<img width="773" height="446" alt="v2 3 Info3" src="https://github.com/user-attachments/assets/5042469b-5cde-48f6-804b-1b47a6fc9b27" />
+<img width="915" height="225" alt="v2 3 5SS11" src="https://github.com/user-attachments/assets/60b63c19-ca6f-4903-8bb5-6116f93338df" />
 
-### Extras node groups
+### Extra node groups
 
 *These are groups of nodes that function as additional add-ons: “Sun Damage” adds a gradient to “DBD Face Sun Damage” within Bubba's nodes, leaving a visible mark along the edges; “Texture Color Influence” is only for editing colors, saturations, etc., of a color texture (BC); “Custom Tip/Root Color” is only useful on hair whose UVs' have been changed—such as Legacy wigs—to use IDGAD shaders or the dedicated Hair Styles shader, and "DBD JD IDGAD" is a node group made by JD that only work for Bubba shaders that expect those inputs (Specular, Roughness, and Scatter)*
 
