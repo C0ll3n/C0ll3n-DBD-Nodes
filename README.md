@@ -20,7 +20,7 @@
 
 <img width="626" height="446" alt="v2 3 5SS10" src="https://github.com/user-attachments/assets/5d175c61-408d-44f2-bca9-e2bdd38d43c1" />
 
-### Custom Hairs shader and node
+### Custom Hairs (Swapping/Remapping)
 
 *The IDGAD Hairs node group must be connected to one of the shaders that accept IDGAD texture inputs; it can be used with any shader that processes these textures. Hair Styles is a standalone shader that offers more features because it uses more textures than IDGAD can provide on its own, even with the Flow map*
 *Requires to remap the UV's using a Hair Guide texture (Included in the blend file) in UV Editor*
@@ -30,7 +30,7 @@
 
 <img width="527" height="434" alt="v2 3 Info4" src="https://github.com/user-attachments/assets/497d693c-1ee1-4d67-9741-af7ba5fc09f2" />
 
-### Parallax/Offset Alpha Hair Composite, Input and Output
+### Parallax/Offset
 
 *These are groups of nodes designed to create the effect of adding more hair, which is useful for models with very little hair. The effect varies depending on the viewing angle, but it requires support from a shader; it can be either IDGAD or Legacy*
 *You need to create 3 more copies of the original texture, depending on which one you're working on (IDGAD or Legacy), no apply for Simple version*
