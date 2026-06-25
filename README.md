@@ -65,3 +65,64 @@
 <img width="132" height="242" alt="v2 3 SS3" src="https://github.com/user-attachments/assets/744508a9-e7c3-4845-9a03-2fb18e32b5e9" /> <img width="167" height="99" alt="v2 3 SS4" src="https://github.com/user-attachments/assets/eeddfb1c-14b3-4e14-aeb3-a08387706cae" />
 
 *Within 'NodeTree' you'll find more nodes with parentheses '(Don't Import)' and more textures in 'Image'. You can completely ignore these, as each one is imported internally into the same Shaders or Node Group being used*
+
+## Usage Examples
+
+### C0ll3n DBD Hair (IDGAD/Legacy)
+
+- IDGAD
+<img width="835" height="654" alt="image" src="https://github.com/user-attachments/assets/f4d7afaf-5981-44f8-abc0-d51ace4293bd" />
+
+*In this shader, you can connect textures directly. Everything else is handled by the shader itself without needing to add anything extra, unless you want to experiment. However, what I consider necessary for customization is already built in.*
+
+*If you want to modify the brightness, simply adjust the 'Roughness' and 'Specular Shared' parameters.*
+
+*The Root Color and Tip Color transitions, and their blending, are handled by the 'Root/Tip Mask' section. Similarly, all color-related adjustments, such as saturation and intensity, are also handled by the 'Root/Tip Color' section.*
+
+*The necessary values ​​for Specular Lobe 1 and 2 are shown only if you want to experiment with brightness and reflections.*
+
+*Scattering is simply adjusted in the 'Scatter' section to enhance the effects of light passing through the hair strands and improve the appearance of renders with integrated rim lights. For intense highlights, simply set 'Intensity' to values ​​above 0.600.*
+
+*I will provide a more detailed manual later explaining its use and the function of each parameter.*
+
+- Legacy
+<img width="782" height="794" alt="image" src="https://github.com/user-attachments/assets/b6b22957-0932-411e-ad2b-73a376facd0f" />
+
+*Legacy is quite different because it uses its textures independently, unlike IDGAD, which uses packaged textures. Therefore, it requires more textures to complete a setup.*
+
+*The three main textures present in all Legacy hairs are Diffuse, Alpha, and Gradient (similar to a Mask or RootTip Mask), which I've grouped in the white area for this example. The textures that can sometimes exist are Height, ID, and Normal Map, which I've also enclosed in the blue area for the example. However, in the hair material information, we won't always have all compatible textures. For example, 'T_CMMHair_12_BC' can use the Normal Map 'T_CMMHair_03_Soft_N' without issue, as well as any texture that matches the same sample. That is, as long as the textures match in shape and strands (this can be determined simply by viewing the same textures in the Windows image viewer or the image viewer of your operating system), they can share the same textures. Unfortunately, materials don't always provide this information.*
+
+*I'm keeping this in this function because the game relies heavily on the Unreal Engine to significantly improve real-time rendering without needing to create more physical strands. However, the render shows a "raw" model where we see the real model without any Unreal Engine shaders applied. Therefore, I'm working with this Blender shader in this way to compensate for these shortcomings, instead of integrating completely pure values ​​as Unreal Engine handles them.*
+
+*And the Root and Tip Color options, which I put in the red group, are purely optional. They're simply the available inputs if you want to experiment with combining more colors and not just using Diffuse. Unfortunately, legacy textures are less detailed than IDGAD's, so I've included a checkbox to indicate whether or not you want to use them.*
+
+*If Height and ID did not exist, I created a 'If Missing Maps' section where they can be procedurally derived, that is, based on existing main textures such as Diffuse, Alpha and Gradient.*
+
+### Hair Composite Nodes
+
+- C0ll3N Hair Composite
+<img width="1031" height="693" alt="image" src="https://github.com/user-attachments/assets/61e9ba19-827b-4e26-b1fa-fc6ab5ff44fd" />
+
+*These nodes are simply intermediaries that convert some parameters of the dedicated shader 'C0ll3n DBD Hair' for the Bubba and Lance Queen shaders, primarily. They can be used for other shaders as long as they accept similar essential inputs, at least from Diffuse and Alpha.*
+
+*I don't see the need to explain texture connections here either, as they are handled the same way in the original shader.*
+
+<img width="1051" height="817" alt="image" src="https://github.com/user-attachments/assets/a1849878-bf28-440f-a38e-863800bc8443" />
+
+*For Lance Que's shader, you can connect 'Root Tip Mask' with 'Gradient Tint', although it's purely optional.*
+
+<img width="1109" height="892" alt="image" src="https://github.com/user-attachments/assets/f5396756-d8b4-4f21-b57b-a3991853947e" />
+
+*As I said before, the Legacy hair connections are the same as those used in the dedicated shader.*
+
+<img width="1212" height="921" alt="image" src="https://github.com/user-attachments/assets/9c54d731-3889-4857-80fa-a421a6deca79" />
+
+*The connections with the Lance Queen Legacy shader are a little different, as the Height Map must be connected to the Hair Composite as well as its shader.*
+
+- C0ll3n HC Simple [IDGAD]
+
+<img width="1134" height="619" alt="image" src="https://github.com/user-attachments/assets/e3ae2cab-efc8-4cf9-a65c-c34cd7792a33" />
+
+*The simplified version also features adaptability sockets that can be used with both Bubba's and Lance Quen's IDGAD shaders, as well as their Legacy versions.*
+
+*The question is: Are they necessary? This depends on your purpose in terms of appearance, as each shader works differently and is only similar in some aspects.*
