@@ -127,9 +127,39 @@
 
 *The question is: Are they necessary? This depends on your purpose in terms of appearance, as each shader works differently and is only similar in some aspects.*
 
+### Custom Hairs (Swapping/Remapping)
+
+- C0ll3n IDGAD Hairs
+<img width="806" height="678" alt="image" src="https://github.com/user-attachments/assets/8ea54b43-35f9-4646-be05-35e9789b6a5f" />
+
+*IDGAD Hairs are nodes that group textures of the same format and packing order. They have 4 different hair types and require a shader that can process the same type of textures (IDGAD). To use them correctly, the original UVs of the hair model must be changed to those of the user's choice: straight, unkempt, curly, or dreadlocks. To do this, you need to use one of the guide textures found in the 'Image' section instead of importing something from 'NodeTree'.*
+
+- C0ll3n Hair Styles
+
+<img width="697" height="514" alt="image" src="https://github.com/user-attachments/assets/3556e789-0451-464a-9869-b3a609559933" />
+
+This shader works on its own, only requiring a Root and Tip Color texture, but to take advantage of it, you also need the same hair guides used for IDGAD Hairs and to change the UVs of the hair model. The difference between this shader and the dedicated IDGAD shaders is that it comes with more complete textures to give a better look than just what an IDGAD shader and Flow offer on their own.
+
 ### Parallax/Offset
 
 - C0ll3n Parallax/Offset [Inputs & Outputs]
 <img width="1403" height="783" alt="image" src="https://github.com/user-attachments/assets/05633675-e471-4ca1-b005-203381569f48" />
 
 *These would be perhaps the most complex nodes to understand how they should be connected, but for this I created entries that adapt their function in DBD Hair and Hair Composite.*
+
+<img width="1488" height="918" alt="image" src="https://github.com/user-attachments/assets/b7554059-f113-4638-9042-73262be20e89" />
+
+*For Legacy, arranging the nodes is a bit more complex, but it's the same process; it just requires more textures for the same reason (independent textures).*
+
+<img width="1892" height="872" alt="image" src="https://github.com/user-attachments/assets/83232477-e0c8-42e7-bdfc-1664a3413bce" />
+
+*If using 'Hair Composite', the correct way would be this for Legacy along with Bubba's shader [Experimental]*
+
+<img width="1908" height="814" alt="image" src="https://github.com/user-attachments/assets/b936fa30-450d-4d7c-b78e-1949d8080b18" />
+
+*And finally, this would be the example for any IDGAD shader as long as it has its respective compatible inputs.*
+
+- C0ll3n Simple Parallax
+<img width="1394" height="883" alt="image" src="https://github.com/user-attachments/assets/baa07e05-2b3b-458b-98f7-2a42ade7dd80" />
+
+*The method for connecting the simple version is simply to connect it to each texture that works in the shader, regardless of which one it is.*
