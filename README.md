@@ -130,15 +130,18 @@
 ### Custom Hairs (Swapping/Remapping)
 
 - C0ll3n IDGAD Hairs
-<img width="806" height="678" alt="image" src="https://github.com/user-attachments/assets/8ea54b43-35f9-4646-be05-35e9789b6a5f" />
+<img width="1000" height="664" alt="image" src="https://github.com/user-attachments/assets/2202c1d9-3c02-4f08-a076-6f9293c153b4" />
 
-*IDGAD Hairs are nodes that group textures of the same format and packing order. They have 4 different hair types and require a shader that can process the same type of textures (IDGAD). To use them correctly, the original UVs of the hair model must be changed to those of the user's choice: straight, unkempt, curly, or dreadlocks. To do this, you need to use one of the guide textures found in the 'Image' section instead of importing something from 'NodeTree'.*
+*IDGAD Hairs is a node group that handles IDGAD textures, meaning they share the same format and packing order. They include four different hair types and require a shader capable of processing IDGAD textures. To use them correctly, the original UV coordinates of the hair model must be modified according to the user's preferences: straight, unkempt, curly or dreadlocks. To do this, you must use one of the guide textures found in the 'Image' section instead of importing one from the 'NodeTree.*
+
+*If the swapping is performed on a different UV, there is a UV input available to connect a 'UV Map' node and select the UV where the remap was performed.*
 
 - C0ll3n Hair Styles
+<img width="748" height="521" alt="image" src="https://github.com/user-attachments/assets/21ea9088-6852-4a2f-8ac8-fe2f955bd600" />
 
-<img width="697" height="514" alt="image" src="https://github.com/user-attachments/assets/3556e789-0451-464a-9869-b3a609559933" />
+*This shader works independently, requiring only a root and tip color texture. However, to use it effectively, you also need the same hair guides used for IDGAD Hairs and to modify the hair model's UVs. The difference between this shader and the dedicated IDGAD shaders is that it comes with more comprehensive textures for a more detailed appearance.*
 
-This shader works on its own, only requiring a Root and Tip Color texture, but to take advantage of it, you also need the same hair guides used for IDGAD Hairs and to change the UVs of the hair model. The difference between this shader and the dedicated IDGAD shaders is that it comes with more complete textures to give a better look than just what an IDGAD shader and Flow offer on their own.
+*It also features a UV Map input to connect a node of the same name and select the UV where the remap was performed.*
 
 ### Parallax/Offset
 
@@ -163,3 +166,25 @@ This shader works on its own, only requiring a Root and Tip Color texture, but t
 <img width="1394" height="883" alt="image" src="https://github.com/user-attachments/assets/baa07e05-2b3b-458b-98f7-2a42ade7dd80" />
 
 *The method for connecting the simple version is simply to connect it to each texture that works in the shader, regardless of which one it is.*
+
+### Extra Node Groups
+
+- Custom Tip/Root Color
+<img width="698" height="520" alt="image" src="https://github.com/user-attachments/assets/5bb6e664-e0bf-40ac-979c-d69010419526" />
+
+*Despite its simple node group, it can be very useful when you don't have or don't want to use the original hair colors of any model whose UVs have been remapped; it only handles two colors in the same gradient at the moment.*
+
+- Texture Color Influence
+<img width="1031" height="674" alt="image" src="https://github.com/user-attachments/assets/d5ebbb1d-0512-4326-bfb8-45b27d82ee75" />
+
+*The use of this node group is purely for beginners, where they can use it to manipulate tones, color changes, saturations, etc. of any texture*
+
+- Sun Damage Gradient
+<img width="1347" height="677" alt="image" src="https://github.com/user-attachments/assets/04c3fd5e-d94e-481a-8dc4-f225bf5a57ce" />
+
+*This node grup is exclusively for use in combination with Bubba's 'DBD Face Sun Damage' shaders. Its function is simply to degrade the edges of the effect so that they are not sharply defined. This is very noticeable at high intensities in the configuration, but at low intensities, it will only remain as an added detail.*
+
+- DBD JD IDGAD
+<img width="1225" height="698" alt="image" src="https://github.com/user-attachments/assets/5019254d-e6d5-4f35-992d-24bed837c8a9" />
+
+*This node group was previously exclusive to IRS textures, but it can be used without issue for IDGAD textures. It allows for more detailed control of parameters such as Roughness, Specular, and Scatter Values. It also allows the connection of RootTip Masks. This is an example of how to connect this node group.*
